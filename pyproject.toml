@@ -1,0 +1,28 @@
+[project]
+name = "solana-gas-cpu"
+version = "0.1.0"
+description = "solana analytics"
+authors = [{ name = "Evan K", email = "ekcopersonal@gmail.com" }]
+dependencies = [
+    "polars>=0.20.31",
+    "requests>=2.32.3",
+    "solders>=0.21.0",
+    "solana>=0.34.2",
+    "cachetools>=5.3.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/solana_gas_cpu"]
